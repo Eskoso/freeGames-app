@@ -13,7 +13,7 @@
   <p align="center">
     <br />
     <br />
-    <a href="https://free-game-browser.netlify.app/">View Demo</a>
+    <a href="https://free-games-app.netlify.app/">View Demo</a>
     ·
     <a href="https://github.com/eskoso/freeGames-app/issues">Report Bug</a>
     ·
