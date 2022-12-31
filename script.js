@@ -1,8 +1,9 @@
+import apikey from "./config.js"
 // Api call show all--->
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": rapid_api_key,
+    "X-RapidAPI-Key": apikey,
     "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
   },
 };
