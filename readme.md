@@ -29,7 +29,7 @@
 ### Built With
 
 * [![HTML]
-* [![Vanilla JS]
+* [![JQuery]
 
 
 
