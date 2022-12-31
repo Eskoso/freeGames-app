@@ -2,7 +2,7 @@
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "",
+    "X-RapidAPI-Key": "process.env.X_RapidAPI_Key",
     "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
   },
 };
