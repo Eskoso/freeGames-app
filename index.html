@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>api free games</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body >
+    <div id="circle" class="circle"></div>
+    <div id="circle" class="circle2"></div>
+    <div id="circle" class="circle3"></div>
+
+    <div class="app">
+
+      <!-- <nav class="primary-nav" id="nav">
+        <ul class="nav-list">
+          <li class="links"><a href="#">Home</a></li>
+          <li class="links"><a href="#">Contact</a></li>
+          <li class="links"><a href="#">About</a></li>
+        </ul>
+        
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+          <svg
+            width="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 496 496"
+          >
+            <path
+              fill="currentColor"
+              d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z"
+              transform="translate(-8 -8)"
+            />
+          </svg>
+        </button>
+      </nav> -->
+
+      <div class="scroll-indicator" id="scroll-indicator"></div>
+
+      <div class="scrollbar-wrapper">
+        <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
+        <div class="tags-box" id="tags">
+          <button type="button" class="tag" value="shooter">Shooter</button>
+          <button type="button" class="tag" value="sandbox">Sandbox</button>
+          <!-- <button type="button" class="tag" value="mmorpg">mmorpg</button> -->
+          <button type="button" class="tag" value="strategy">Strategy</button>
+          <button type="button" class="tag" value="racing">Racing</button>
+          <button type="button" class="tag" value="sports">Sports</button>
+          <button type="button" class="tag" value="open-world">
+            Open world
+          </button>
+          <button type="button" class="tag" value="survival">Survival</button>
+          <!-- <button type="button" class="tag" value="pvp">pvp</button> -->
+          <!-- <button type="button" class="tag" value="pve">pve</button> -->
+          <!-- <button type="button" class="tag" value="pixel">Pixel</button> -->
+          <!-- <button type="button" class="tag" value="voxel">voxel</button> -->
+          <button type="button" class="tag" value="zombie">Zombie</button>
+          <!-- <button type="button" class="tag" value="turn-based">turn based</button> -->
+          <button type="button" class="tag" value="first-person">FPS</button>
+          <button type="button" class="tag" value="third-Person">TPS</button>
+          <!-- <button type="button" class="tag" value="top-down">top down</button> -->
+          <!-- <button type="button" class="tag" value="tank">tank</button> -->
+          <!-- <button type="button" class="tag" value="space">Space</button> -->
+          <!-- <button type="button" class="tag" value="sailing">Sailing</button> -->
+          <!-- <button type="button" class="tag" value="side-scroller">side scroller</button> -->
+          <!-- <button type="button" class="tag" value="superhero">superhero</button> -->
+          <!-- <button type="button" class="tag" value="permadeath">permadeath</button> -->
+          <button type="button" class="tag" value="card">Card</button>
+          <button type="button" class="tag" value="battle-royale">
+            Battle royale
+          </button>
+          <button type="button" class="tag" value="mmo">MMO</button>
+          <!-- <button type="button" class="tag" value="mmofps">mmofps</button> -->
+          <!-- <button type="button" class="tag" value="mmotps">mmotps</button> -->
+          <button type="button" class="tag" value="3d">3d</button>
+          <button type="button" class="tag" value="2d">2d</button>
+          <button type="button" class="tag" value="anime">Anime</button>
+          <!-- <button type="button" class="tag" value="sci-fi">sci fi</button> -->
+          <!-- <button type="button" class="tag" value="fighting">fighting</button> -->
+          <button type="button" class="tag" value="action-rpg">
+            Action rpg
+          </button>
+          <button type="button" class="tag" value="action">Action</button>
+          <button type="button" class="tag" value="military">Military</button>
+          <!-- <button type="button" class="tag" value="martial-arts">martial arts</button> -->
+          <!-- <button type="button" class="tag" value="flight">flight</button> -->
+          <!-- <button type="button" class="tag" value="low-spec">low spec</button> -->
+          <!-- <button type="button" class="tag" value="tower-defense">tower defense</button> -->
+          <button type="button" class="tag" value="horror">Horror</button>
+          <!-- <button type="button" class="tag" value="mmorts">mmorts</button> -->
+        </div>
+        <div class="icon">
+          <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          onkeyup="searchGames()"
+          placeholder="Search for Games.."
+          data-search
+        />
+      </div>
+
+      <!-- <template data-card-template>
+      <div class="card" data-card-container>
+         	  	<img class="thumbnail" src="" alt="" data-thumbnail>
+         	  	<h1 class="title" data-title></h1>
+         	  	<p class="description" data-description></p>
+         		  <p class="release_date" data-release-date>Published: </p>
+         		  <p class="publisher" data-publisher>Game publisher: </p>
+         		  <p class="developer" data-developer>Developer: </p>
+         		  <p class="genre" data-genre>Genre: </p>
+         	  </div>	
+    </template> -->
+
+      <div id="game-cards"></div>
+      <div class="footer footer-img"></div>
+      <div class="bottom-glow"></div>
+    </div>
+  </body>
+</html>
