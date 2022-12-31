@@ -7,58 +7,6 @@ const options = {
   },
 };
 
-// search game functionality --->
-
-// const cardTemplate = document.querySelector("[data-card-template]");
-// const cardContainer = document.querySelector("[data-cards]");
-// const searchInput = document.querySelector("[data-search]");
-
-// let cards = [];
-
-// searchInput.addEventListener("input", (e) => {
-//   const value = e.target.value;
-//   cards.forEach((game) => {
-
-//      const isVisible = game.title.includes(value);
-
-//      game.element.classList.toggle("hide", !isVisible);
-//   });
-// });
-
-// fetch("https://free-to-play-games-database.p.rapidapi.com/api/games", options)
-//   .then((res) => res.json())
-//   .then((data) => {
-//     cards = data.map(game => {
-//       const card = cardTemplate.content.cloneNode(true).children[0];
-//       const thumbnail = (card.querySelector("[data-thumbnail]").src =
-//         game.thumbnail);
-//       const title = card.querySelector("[data-title]");
-//       const description = card.querySelector("[data-description]");
-//       const release = card.querySelector("[data-release-date]");
-//       const publisher = card.querySelector("[data-publisher]");
-//       const developer = card.querySelector("[data-developer]");
-//       const genre = card.querySelector("[data-genre]");
-//       thumbnail.content = game.thumbnail;
-//       title.textContent = game.title;
-//       description.textContent = game.short_description;
-//       release.textContent = game.release_date;
-//       publisher.textContent = "Published: " + game.publisher;
-//       developer.textContent = "Developer: " + game.developer;
-//       genre.textContent = "Genre: " + game.genre;
-//       cardContainer.append(card);
-//       return {
-//         game: thumbnail,
-//         game: title,
-//         game: description,
-//         game: release,
-//         game: publisher,
-//         game: developer,
-//         game: genre,
-//         element: card,
-//       };
-//     });
-//   });
-
 function searchGames() {
   let input = document.getElementById("search").value;
   input = input.toLowerCase();
@@ -190,35 +138,35 @@ tabsBox.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 // <--- ending ^Scrollbar functionality^
 
-// darkmode toggle + localstorage --->
-let lightMode = localStorage.getItem("lightMode");
-const lightModeToggle = document.querySelector("#dark-mode-toggle");
+// // darkmode toggle + localstorage --->
+// let lightMode = localStorage.getItem("lightMode");
+// const lightModeToggle = document.querySelector("#dark-mode-toggle");
 
-const enablelightMode = () => {
-  document.body.classList.add("lightMode");
+// const enablelightMode = () => {
+//   document.body.classList.add("lightMode");
 
-  localStorage.setItem("lightMode", "enabled");
-};
+//   localStorage.setItem("lightMode", "enabled");
+// };
 
-const disablelightMode = () => {
-  document.body.classList.remove("lightMode");
+// const disablelightMode = () => {
+//   document.body.classList.remove("lightMode");
 
-  localStorage.setItem("lightMode", null);
-};
+//   localStorage.setItem("lightMode", null);
+// };
 
-if (lightMode === "enabled") {
-  enablelightMode();
-}
+// if (lightMode === "enabled") {
+//   enablelightMode();
+// }
 
-lightModeToggle.addEventListener("click", () => {
-  lightMode = localStorage.getItem("lightMode");
-  if (lightMode != "enabled") {
-    enablelightMode();
-  } else {
-    disablelightMode();
-  }
-});
-// <--- ending ^darkmode toggle + localstorage^
+// lightModeToggle.addEventListener("click", () => {
+//   lightMode = localStorage.getItem("lightMode");
+//   if (lightMode != "enabled") {
+//     enablelightMode();
+//   } else {
+//     disablelightMode();
+//   }
+// });
+// // <--- ending ^darkmode toggle + localstorage^
 
 // scroll indicator (top) --->
 window.onscroll = function () {
