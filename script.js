@@ -7,6 +7,8 @@ const options = {
   },
 };
 
+// search game functionality --->
+
 function searchGames() {
   let input = document.getElementById("search").value;
   input = input.toLowerCase();
